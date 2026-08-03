@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setting.SettingController">
+   <left>
+      <AnchorPane prefHeight="1080.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="260.0" style="-fx-background-color: #1E3E9B; -fx-padding: 20px 15px;">
+               <children>
+                  <VBox spacing="4.0" style="-fx-padding: 0 0 15 10;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-size: 26px; -fx-text-fill: #FFFFFF;" text="🏍" />
+                              <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FFB800;" text="GK" />
+                           </children>
+                        </HBox>
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #E0E7FF; -fx-font-weight: 500; -fx-opacity: 0.8;" text="Bike Service Management System" />
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.15" style="-fx-padding: 0 0 15 0;" />
+                  <VBox spacing="6.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Dashboard" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📊   Dashboard" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#customer" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="👥   Customer &amp; Bike" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#JobCard" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📋   Job Card" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Mechanics" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="👨‍🔧   Mechanics" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SpareParts" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📦   Inventory &amp; Spare Parts" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#BillingAndInvoice" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="🧾   Billing / Invoice" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Reports" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📈   Reports" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Setting" style="-fx-background-color: rgba(255,255,255,0.12); -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="⚙️   Setting" />
+                     </children>
+                  </VBox>
+                  <Region prefHeight="274.0" prefWidth="230.0" VBox.vgrow="ALWAYS" />
+                  <Separator opacity="0.15" style="-fx-padding: 10 0;" />
+                  <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: transparent; -fx-text-fill: #FCA5A5; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="🚪   Logout" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1661.0" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-padding: 0 20 0 20; -fx-border-color: #E2E8F0; -fx-border-width: 0 0 1 0;">
+                     <children>
+                        <Label style="-fx-font-size: 20px; -fx-text-fill: #1E293B; -fx-cursor: hand;" text="☰" />
+                        <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #0F172A; -fx-padding: 0 0 0 10;" text="Setting" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" spacing="15.0">
+                           <children>
+                              <HBox alignment="CENTER" spacing="8.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <Label style="-fx-background-color: #DBEAFE; -fx-text-fill: #1D4ED8; -fx-font-size: 13px; -fx-padding: 6 9; -fx-background-radius: 50%; -fx-font-weight: bold;" text="A" />
+                                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="Admin" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+         </top>
+         <center>
+            <AnchorPane minHeight="700.0" minWidth="1330.0" prefHeight="700.0" prefWidth="1330.0" style="-fx-background-color: #F8FAFC;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="989.0" prefWidth="1650.0" spacing="25.0">
+                     <children>
+                        <HBox spacing="25.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Shop / Business Information" textFill="#1A2530">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Service Center Name *" textFill="#4A5568" />
+                                          <TextField fx:id="txtShopName" prefHeight="35.0" promptText="Enter Shop Name" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Phone Number *" textFill="#4A5568" />
+                                          <TextField fx:id="txtPhone" prefHeight="35.0" promptText="Enter Contact Number" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="GST Number (Optional)" textFill="#4A5568" />
+                                          <TextField fx:id="txtGst" prefHeight="35.0" promptText="Enter GSTIN (If applicable)" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="35.0" layoutY="251.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Company Addres" textFill="#4A5568" />
+                                          <TextField fx:id="txtGst1" prefHeight="35.0" promptText="address details" />
+                                       </children>
+                                    </VBox>
+                                    <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #1A56DB; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Save Shop Info">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="420.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);">
+                                 <children>
+                                    <Label text="Login &amp; Password Settings" textFill="#1A2530">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Manage your desktop application access." textFill="#718096" />
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Admin Username" textFill="#4A5568" />
+                                          <TextField fx:id="txtUsername" prefHeight="35.0" promptText="Update Username" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Current Password" textFill="#4A5568" />
+                                          <PasswordField fx:id="txtCurrentPassword" prefHeight="35.0" promptText="Enter Current Password" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="New Password" textFill="#4A5568" />
+                                          <PasswordField fx:id="txtNewPassword" prefHeight="35.0" promptText="Enter New Password" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Confirm New Password" textFill="#4A5568" />
+                                          <PasswordField fx:id="txtConfirmPassword" prefHeight="35.0" promptText="Repeat New Password" />
+                                       </children>
+                                    </VBox>
+                                    <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #059669; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Update Credentials">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

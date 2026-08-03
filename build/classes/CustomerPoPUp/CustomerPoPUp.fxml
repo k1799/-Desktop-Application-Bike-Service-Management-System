@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="popupRoot" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: rgba(0,0,0,0.5);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerPoPUp.CustomerPoPUpController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="774.0" prefWidth="662.0" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12px; -fx-padding: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 5);">
+         <children>
+            <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 0 5 0;">
+               <children>
+                  <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="👤  Add Customer &amp; Bike Details" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0056FF;" text="Personal Information" />
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Customer ID" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="cid" disable="true" editable="false" promptText="Enter customer Id" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Customer Name" />
+                        <TextField fx:id="cname" promptText="Enter Customer Name" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Phone Number" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="cphone" promptText="Enter phone number" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Bike Number" />
+                        <TextField fx:id="cbknum" promptText="Enter Bike number" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Brand" />
+                        <TextField fx:id="cbrand" promptText="e.g.Bajaj" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="57.0" prefWidth="309.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Model" />
+                        <TextField fx:id="cmodel" promptText="e.g., Pulsar 150 / Activa 6G" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Address" />
+                  <TextArea fx:id="caddress" prefHeight="55.0" promptText="Enter full address" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px;" wrapText="true" />
+               </children>
+            </VBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Current KM" />
+                        <TextField fx:id="ckm" promptText="e.g., 24500" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Notes" />
+                        <TextArea fx:id="cnotes" prefHeight="50.0" promptText="Enter any notes (optional)" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px;" wrapText="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10 0 5 0;">
+               <children>
+                  <Button onAction="#cancel" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0056FF; -fx-border-radius: 6px; -fx-text-fill: #0056FF; -fx-font-weight: bold; -fx-cursor: hand;" text="✕  Cancel" />
+                  <Button fx:id="btnSave" onAction="#save" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #0056FF; -fx-background-radius: 6px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-cursor: hand;" text="💾  Save Customer" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

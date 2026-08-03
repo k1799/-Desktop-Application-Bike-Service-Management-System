@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootstackpane" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SpareParts.SparePartsController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+         <left>
+            <AnchorPane prefHeight="1080.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="260.0" style="-fx-background-color: #1E3E9B; -fx-padding: 20px 15px;">
+                     <children>
+                        <VBox spacing="4.0" style="-fx-padding: 0 0 15 10;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 26px; -fx-text-fill: #FFFFFF;" text="🏍" />
+                                    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FFB800;" text="GK" />
+                                 </children>
+                              </HBox>
+                              <Label style="-fx-font-size: 12px; -fx-text-fill: #E0E7FF; -fx-font-weight: 500; -fx-opacity: 0.8;" text="Bike Service Management System" />
+                           </children>
+                        </VBox>
+                        <Separator opacity="0.15" style="-fx-padding: 0 0 15 0;" />
+                        <VBox spacing="6.0">
+                           <children>
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Dashboard" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📊   Dashboard" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#customer" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="👥   Customer &amp; Bike" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#JobCard" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📋   Job Card" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Mechanics" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="👨‍🔧   Mechanics" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SpareParts" style="-fx-background-color: rgba(255,255,255,0.12); -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📦   Inventory &amp; Spare Parts" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#BillingAndInvoice" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="🧾   Billing / Invoice" />
+                              <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Reports" style="-fx-background-color: transparent; -fx-text-fill: #E2E8F0; -fx-font-weight: 500; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="📈   Reports" />
+                           </children>
+                        </VBox>
+                        <Region prefHeight="274.0" prefWidth="230.0" VBox.vgrow="ALWAYS" />
+                        <Separator opacity="0.15" style="-fx-padding: 10 0;" />
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: transparent; -fx-text-fill: #FCA5A5; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 12 15; -fx-background-radius: 6px; -fx-cursor: hand;" text="🚪   Logout" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1659.0" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-padding: 0 20 0 20; -fx-border-color: #E2E8F0; -fx-border-width: 0 0 1 0;">
+                           <children>
+                              <Label style="-fx-font-size: 20px; -fx-text-fill: #1E293B; -fx-cursor: hand;" text="☰" />
+                              <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #0F172A; -fx-padding: 0 0 0 10;" text="Inventory &amp; Spare Parts Management" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <HBox alignment="CENTER" spacing="15.0">
+                                 <children>
+                                    <Button onAction="#addSpareParts" style="-fx-background-color: #1D4ED8; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px; -fx-padding: 8 16; -fx-background-radius: 6px; -fx-cursor: hand;" text="＋ Add Spare Parts" />
+                                    <HBox alignment="CENTER" spacing="8.0" style="-fx-cursor: hand;">
+                                       <children>
+                                          <Label style="-fx-background-color: #DBEAFE; -fx-text-fill: #1D4ED8; -fx-font-size: 13px; -fx-padding: 6 9; -fx-background-radius: 50%; -fx-font-weight: bold;" text="A" />
+                                          <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1E293B;" text="Admin" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane minHeight="700.0" minWidth="1330.0" prefHeight="700.0" prefWidth="1330.0" style="-fx-background-color: #F8FAFC;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox layoutX="7.0" layoutY="-7.0" prefHeight="1004.0" prefWidth="1641.0" spacing="20.0" style="-fx-background-color: #F8FAFC;">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="1571.0" spacing="30.0">
+                                       <children>
+                                          <TextField fx:id="txtSearch" prefWidth="320.0" promptText="Search by part name,part id,brand...." style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 8px;" />
+                                          <Region prefHeight="63.0" prefWidth="334.0" />
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="SparePartsTable" prefHeight="708.0" prefWidth="1567.0" style="-fx-background-color: transparent; -fx-border-color: #E2E8F0; -fx-border-radius: 4px;" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="spid" prefWidth="100.0" text="Part Id" />
+                                          <TableColumn fx:id="spnum" prefWidth="140.0" text="Part Number" />
+                                          <TableColumn fx:id="spname" prefWidth="120.0" text="Part Name" />
+                                          <TableColumn fx:id="spcategory" prefWidth="125.33331298828125" text="Category" />
+                                          <TableColumn fx:id="spbrand" prefWidth="129.0" text="Brand" />
+                                          <TableColumn fx:id="spcurrentstock" prefWidth="122.0" text="Current Stock" />
+                                          <TableColumn fx:id="spminstock" prefWidth="122.3333740234375" text="Min Stock" />
+                                          <TableColumn fx:id="spsellingprice" prefWidth="149.6666259765625" text="Selling Price" />
+                                          <TableColumn fx:id="spselflocation" prefWidth="158.3333740234375" text="Rack / Shelf Location" />
+                                          <TableColumn fx:id="spaction" prefWidth="140.0" text="Action" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label style="-fx-text-fill: #64748B; -fx-font-size: 14px;" text="Showing 1 to 7 of 120 entries" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <HBox alignment="CENTER" spacing="5.0">
+                                             <children>
+                                                <Button style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 4px;" text="&lt;" />
+                                                <Button style="-fx-background-color: #2563EB; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-background-radius: 4px;" text="1" />
+                                                <Button style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 4px;" text="2" />
+                                                <Button style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 4px;" text="3" />
+                                                <Label style="-fx-text-fill: #64748B; -fx-padding: 0 5px;" text="..." />
+                                                <Button style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 4px;" text="18" />
+                                                <Button style="-fx-background-color: #F1F5F9; -fx-text-fill: #64748B; -fx-background-radius: 4px;" text="&gt;" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

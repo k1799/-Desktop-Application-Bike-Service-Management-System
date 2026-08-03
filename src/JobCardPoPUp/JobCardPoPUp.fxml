@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="popupRoot" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: rgba(0,0,0,0.5);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JobCardPoPUp.JobCardPoPUpController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="805.0" spacing="12.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12px; -fx-padding: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 5);">
+         <children>
+            <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 0 5 0;">
+               <children>
+                  <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="📝  Create Job Card" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0056FF;" text="Vehicle &amp; Customer Selection" />
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Job Card ID" />
+                        <TextField fx:id="jid" editable="false" style="-fx-background-color: #F1F5F9; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Date &amp; Time" />
+                        <TextField fx:id="jdatetime" editable="false" style="-fx-background-color: #F1F5F9; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Customer Name" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="jcustomer" editable="false" style="-fx-background-color: #F8FAFC; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Select Bike Number" />
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="jbknum" maxWidth="1.7976931348623157E308" onAction="#bikeNumberSelected" prefHeight="35.0" prefWidth="265.0" promptText="Select Bike" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 4 5;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox prefHeight="55.0" prefWidth="661.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Brand" />
+                        <TextField fx:id="jbrand" editable="false" style="-fx-background-color: #F8FAFC; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B;" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="661.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Model " />
+                        <TextField fx:id="jmodel" editable="false" style="-fx-background-color: #F8FAFC; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0056FF; -fx-padding: 5 0 0 0;" text="Service &amp; Assignment Details" />
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Service Type" />
+                        <ComboBox fx:id="jservicetype" maxWidth="1.7976931348623157E308" promptText="Select Service Type" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 4 5;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Fuel Level Indicator" />
+                        <ComboBox fx:id="jfuelindi" maxWidth="1.7976931348623157E308" promptText="Select Fuel Level" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 4 5;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Assign Mechanic" />
+                        <ComboBox fx:id="jassianmechanic" maxWidth="1.7976931348623157E308" promptText="Select Mechanic" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 4 5;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Approximate Cost (₹)" />
+                        <TextField fx:id="jappcost" promptText="e.g., 1500" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Customer Complaints / Service Request" />
+                  <TextArea fx:id="jcomplaints" prefHeight="27.0" prefWidth="692.0" promptText="Write complaints here (e.g., Chain noise, Brake tight, Oil change)..." style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px;" wrapText="true" />
+               </children>
+            </VBox>
+            <HBox layoutX="35.0" layoutY="416.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="55.0" prefWidth="263.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Delivery Date" />
+                        <DatePicker fx:id="jdelivarydate" prefHeight="25.0" prefWidth="288.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="55.0" prefWidth="365.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Current Km" />
+                        <TextField fx:id="jcurrentkm" editable="false" style="-fx-background-color: #F1F5F9; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefWidth="700.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-background-radius: 12; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                     <children>
+                        <Label text="Used Spare Parts" textFill="#1e293b">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" spacing="12.0" style="-fx-background-color: #f8fafc; -fx-padding: 15; -fx-background-radius: 8;">
+                     <children>
+                        <VBox prefHeight="47.0" prefWidth="144.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Spare Part ▼" textFill="#475569">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cmbSparePart" onAction="#sparePartSelected" prefHeight="35.0" prefWidth="180.0" promptText="Select Part" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="47.0" prefWidth="126.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="87.0" text="Available Stock" textFill="#475569">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtAvailableStock" editable="false" prefHeight="35.0" prefWidth="100.0" promptText="0" style="-fx-background-color: #e2e8f0;" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Unit Price" textFill="#475569">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtUnitPrice" editable="false" prefHeight="32.0" prefWidth="100.0" promptText="0.00" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Quantity" textFill="#475569">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtQuantity" prefHeight="35.0" prefWidth="80.0" promptText="1" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAddPart" prefHeight="35.0" prefWidth="73.0" style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="+ Add">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tblSpareParts" prefHeight="122.0" prefWidth="715.0">
+                     <columns>
+                        <TableColumn fx:id="colPartName" prefWidth="250.0" text="Spare Part Name" />
+                        <TableColumn fx:id="colUnitPrice" prefWidth="130.0" text="Unit Price" />
+                        <TableColumn fx:id="colQuantity" prefWidth="120.0" text="Quantity" />
+                        <TableColumn fx:id="colTotal" prefWidth="112.0" text="Total Amount" />
+                        <TableColumn fx:id="caction" prefWidth="102.0" text="Action" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" HBox.hgrow="ALWAYS" />
+                        <Label text="Grand Total:" textFill="#1e293b">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sparetotal" alignment="CENTER_RIGHT" editable="false" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 12 0 5 0;">
+               <children>
+                  <Button onAction="#cancel" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0056FF; -fx-border-radius: 6px; -fx-text-fill: #0056FF; -fx-font-weight: bold; -fx-cursor: hand;" text="✕  Cancel" />
+                  <Button onAction="#save" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #0056FF; -fx-background-radius: 6px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-cursor: hand;" text="🛠️  Create Job Card" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

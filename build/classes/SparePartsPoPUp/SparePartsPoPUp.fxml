@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="popupRoot" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: rgba(0,0,0,0.5);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SparePartsPoPUp.SparePartsPoPUpController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="694.0" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12px; -fx-padding: 25px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 5);">
+         <children>
+            <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 0 5 0;">
+               <children>
+                  <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="📦  Add Spare Part" />
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0056FF;" text="Part &amp; Vehicle Information" />
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Part ID" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="pid" editable="false" style="-fx-background-color: #F1F5F9; -fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10; -fx-text-fill: #64748B; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Part Number" />
+                        <TextField fx:id="pnum" promptText="e.g., BS-1025" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="345.0" layoutY="10.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Part Name" />
+                        <TextField fx:id="pname" promptText="e.g., Front Brake Shoe" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Category" />
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="pcategory" maxWidth="1.7976931348623157E308" promptText="Select Category" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-background-color: #FFFFFF; -fx-padding: 4 5;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Brand / Manufacturer" />
+                        <TextField fx:id="pbrand" promptText="e.g., Bosch / TVS Genuine" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Compatible Vehicle" />
+                  <TextField fx:id="pcompatiblevechicle" promptText="e.g., Pulsar 150, Splendor Plus, All Scooters" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+               </children>
+            </VBox>
+            <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0056FF; -fx-padding: 5 0 0 0;" text="Pricing, Stock &amp; Location" />
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Cost Price (₹)" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="pcostprice" promptText="Holesale Price" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Selling Price / MRP (₹)" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="pseelingprice" promptText="Retail Price" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Opening Quantity" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="popenqty" promptText="Initial stock count" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Min Stock Alert Level" />
+                        <TextField fx:id="pminstockalert" promptText="e.g., 3 (Low stock warning)" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="35.0" layoutY="435.0" spacing="15.0">
+               <children>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Current Stock" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="pcurrentstock" promptText="add Current Stock" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Rack / Shelf Location" />
+                        <TextField fx:id="prackarea" promptText="e.g., Rack A - Self 3" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="55.0" prefWidth="307.0" spacing="5.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12px;" text="Notes" />
+                  <TextField fx:id="pnotes" maxWidth="635.0" prefHeight="33.0" prefWidth="274.0" promptText="Enter Any Problem" style="-fx-background-radius: 6px; -fx-border-color: #E2E8F0; -fx-border-radius: 6px; -fx-padding: 7 10;" />
+               </children>
+            </VBox>
+            <HBox />
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10 0 5 0;">
+               <children>
+                  <Button onAction="#cancel" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0056FF; -fx-border-radius: 6px; -fx-text-fill: #0056FF; -fx-font-weight: bold; -fx-cursor: hand;" text="✕  Cancel" />
+                  <Button fx:id="btnSave" onAction="#save" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #0056FF; -fx-background-radius: 6px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-cursor: hand;" text="💾  Save Spare Part" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
