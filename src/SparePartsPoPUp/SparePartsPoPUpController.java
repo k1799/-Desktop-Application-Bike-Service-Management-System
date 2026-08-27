@@ -105,6 +105,13 @@ public void setSparePart(SparePartsModel sparePart) {
             "Accessories",
             "Others"
     );
+       popenqty.textProperty().addListener((observable, oldValue, newValue) -> {
+
+        if (sparePart == null) {
+            pcurrentstock.setText(newValue);
+        }
+
+    });
     }    
 
     @FXML
